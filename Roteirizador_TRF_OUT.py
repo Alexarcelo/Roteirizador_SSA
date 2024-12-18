@@ -4900,8 +4900,6 @@ if servico_roteiro and data_roteiro:
     
             webhook_thiago = "https://conexao.multiatend.com.br/webhook/luckenvioinformativosalvador"
             
-            enviar_informes = st.button(f'Enviar Informativos de Saída - {servico_roteiro} | {data_roteiro.strftime("%d/%m/%Y")}')
-            
             data_roteiro_str = data_roteiro.strftime('%Y-%m-%d')
             
             payload = {"data": data_roteiro_str, 
