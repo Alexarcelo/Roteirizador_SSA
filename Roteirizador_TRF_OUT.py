@@ -3748,7 +3748,7 @@ def gerar_roteiros_alternativos_4(df_servicos, pax_max_utilitario, pax_max_van, 
 
                     target = pax_max_micro
 
-                elif carro_max > pax_max_utilitario:
+                elif carro_max >= pax_max_utilitario:
 
                     target = pax_max_van
 
@@ -3764,7 +3764,7 @@ def gerar_roteiros_alternativos_4(df_servicos, pax_max_utilitario, pax_max_van, 
 
                     target = pax_max_micro
 
-                elif paxs_total_roteiro > pax_max_utilitario:
+                elif paxs_total_roteiro >= pax_max_utilitario:
 
                     target = pax_max_van
 
