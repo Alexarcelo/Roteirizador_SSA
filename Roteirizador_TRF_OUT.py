@@ -3587,7 +3587,7 @@ def puxar_dados_phoenix():
                                                             (st.session_state.df_router['Servico']!='OUT - MORRO DE SÃO PAULO (SEMI TERRESTRE)') & 
                                                             (st.session_state.df_router['Servico']!='PORTO/AEROPORTO - MSC')].reset_index(drop=True)
     
-    st.session_state.df_router = st.session_state.df_router[(st.session_state.df_router['Status da Reserva']!='CANCELADO')].reset_index(drop=True)
+    st.session_state.df_router = st.session_state.df_router[~(st.session_state.df_router['Status da Reserva'].isin(['CANCELADO', 'RASCUNHO']))].reset_index(drop=True)
 
     st.session_state.df_router['Data Horario Apresentacao Original'] = st.session_state.df_router['Data Horario Apresentacao']
 
